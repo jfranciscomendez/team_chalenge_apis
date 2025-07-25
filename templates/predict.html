@@ -1,8 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %} Predicción {% endblock %}
+
+{% block body %} 
+{% if faltan_datos %}
+    <script src="{{url_for('static', filename= 'js/empty.js')}}"></script>
+    <div class="container">
+    <div class="result-box">
+        <h1>❌ Resultado de la Predicción ❌</h1>
+        <p class="pred-label">El modelo no ha podido predecir</p>
+        <a href="/" class="btn">Volver al inicio</a>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+        text-align: center;
+    }
+
+    .result-box {
+        background-color: #fff;
+        padding: 40px;
+        border-left: 6px solid #f70101;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .result-box h1 {
+        color: #f70101;
+        margin-bottom: 20px;
+    }
+
+    .pred-label {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    .prediction {
+        font-size: 28px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 30px;
+        padding: 10px;
+        background-color: #e9f7ef;
+        border-radius: 6px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+{% endif %}
+
+{% if not faltan_datos %}
 <div class="container">
     <div class="result-box">
         <h1>🔍 Resultado de la Predicción</h1>
-        <p class="pred-label">El modelo ha predicho que el tipo es:</p>
-        <div class="prediction">{{ data.resultado }}</div>
+        <p class="pred-label">El modelo ha predicho con un RMSE de {{data.rmse}}€ que el precio es de:</p>
+        <div class="prediction">{{ data.resultado }} €</div>
         <a href="/" class="btn">Volver al inicio</a>
     </div>
 </div>
@@ -61,4 +133,5 @@
         background-color: #0056b3;
     }
 </style>
-
+{% endif %}
+{% endblock %}

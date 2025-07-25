@@ -1,50 +1,67 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Documentación de la API</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            padding: 30px;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-        }
+{% extends 'base.html' %}
 
-        .container {
-            max-width: 800px;
-            width: 100%;
-        }
+{% block title %} Descripción de features {% endblock %}
 
-        h1, h2 {
-            color: #343a40;
-            text-align: center;
-        }
+{% block body %} 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        padding: 30px;
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+    }
 
-        .endpoint {
-            background-color: #fff;
-            border-left: 6px solid #007bff;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
+    .container {
+        max-width: 800px;
+        width: 100%;
+    }
 
-        code {
-            background-color: #e9ecef;
-            padding: 2px 4px;
-            border-radius: 4px;
-            font-size: 90%;
-        }
+    h1, h2 {
+        color: #343a40;
+        text-align: center;
+    }
 
-        pre {
-            background-color: #e9ecef;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-    </style>
+    h2 {
+        font-size: 30px;
+    }
+
+    .endpoint {
+        background-color: #fff;
+        border-left: 6px solid #28a745; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+        border-radius: 8px;
+        padding: 40px;
+    }
+
+    code {
+        background-color: #e9ecef;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-size: 90%;
+    }
+
+    pre {
+        background-color: #e9ecef;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
 </head>
 <body>
 
@@ -59,8 +76,11 @@
   "Weight_kg": "Peso del portátil en kilogramos",
   "Inches": "Tamaño de la pantalla en pulgadas"
 }</pre>
+            <a href="/" class="btn">Volver al inicio</a>
+
         </div>
     </div>
 
 </body>
 </html>
+{% endblock %}
