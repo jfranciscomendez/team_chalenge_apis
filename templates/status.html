@@ -1,10 +1,53 @@
-{% extends './base.html' %}
+<div class="container">
+    <div class="status-box">
+        <h1>✅ Status OK</h1>
+        <p class="status-msg">Todo está funcionando correctamente.</p>
+        <a href="/" class="btn">Volver al inicio</a>
+    </div>
+</div>
 
-{% block head %} 
-{{ data.titulo }}
-{% endblock %}
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+        text-align: center;
+    }
 
+    .status-box {
+        background-color: #fff;
+        padding: 40px;
+        border-left: 6px solid #17a2b8;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        max-width: 600px;
+        width: 100%;
+    }
 
-{% block body %} 
-<h1>Status OK</h1>
-{% endblock %}
+    .status-box h1 {
+        color: #17a2b8;
+        margin-bottom: 20px;
+    }
+
+    .status-msg {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+

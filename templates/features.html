@@ -1,12 +1,66 @@
-{% extends './base.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentación de la API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 30px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+        }
 
-{% block head %} 
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
 
-{% endblock %}
+        h1, h2 {
+            color: #343a40;
+            text-align: center;
+        }
 
+        .endpoint {
+            background-color: #fff;
+            border-left: 6px solid #007bff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
 
-{% block body %} 
-<h1>
-    
-</h1>
-{% endblock %}
+        code {
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 90%;
+        }
+
+        pre {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+            <h2>/features</h2>
+            <p><strong>Descripción:</strong> Este endpoint describe las características (features) necesarias para realizar una predicción.</p>
+            <p><strong>Método:</strong> <code>GET</code></p>
+
+            <p><strong>Ejemplo de respuesta:</strong></p>
+            <pre>{
+  "Ram_GB": "Cantidad de memoria RAM en gigabytes",
+  "Weight_kg": "Peso del portátil en kilogramos",
+  "Inches": "Tamaño de la pantalla en pulgadas"
+}</pre>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,10 +1,52 @@
-{% extends './base.html' %}
+<div class="container">
+    <div class="error-box">
+        <h1>😕 Oooh, la página que buscas no existe</h1>
+        <p>Es posible que la URL esté mal escrita o que el recurso haya sido movido.</p>
+        <a href="/" class="btn">Volver al inicio</a>
+    </div>
+</div>
 
-{% block head %} 
-Error 404
-{% endblock %}
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        text-align: center;
+    }
 
+    .error-box {
+        background-color: #fff;
+        padding: 40px;
+        border-left: 6px solid #dc3545;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        border-radius: 8px;
+        max-width: 600px;
+    }
 
-{% block body %} 
-<h1>Oooh, la página que busca no existe!</h1>
-{% endblock %}
+    .error-box h1 {
+        color: #dc3545;
+        margin-bottom: 20px;
+    }
+
+    .error-box p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+
