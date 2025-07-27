@@ -1,1 +1,0 @@
-alert('⚠️ Argumentos vacíos, no hay suficientes datos para predecir');

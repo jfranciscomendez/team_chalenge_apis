@@ -1,3 +1,4 @@
+
     <script src="{{url_for('static', filename= 'js/empty.js')}}"></script>
     <div class="container">
     <div class="result-box">
@@ -62,11 +63,12 @@
     }
 </style>
 
+
 <div class="container">
     <div class="result-box">
         <h1>🔍 Resultado de la Predicción</h1>
-        <p class="pred-label">El modelo ha predicho con un RMSE de {{data.rmse}}€ que el precio es de:</p>
-        <div class="prediction">{{ data.resultado }} €</div>
+        <p class="pred-label">El modelo ha predicho que el tipo es:</p>
+        <div class="prediction">{{ data.resultado }}</div>
         <a href="/" class="btn">Volver al inicio</a>
     </div>
 </div>
