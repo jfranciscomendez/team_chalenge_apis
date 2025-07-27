@@ -14,6 +14,19 @@
     }
 
     .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+        text-align: center;
+    }
+
+    .features-box {
+        background-color: #fff;
+        padding: 40px;
+        border-left: 6px solid #17a2b8;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
         max-width: 800px;
         width: 100%;
     }
@@ -65,21 +78,21 @@
 </head>
 <body>
 
-    <div class="container">
-            <h2>/features</h2>
-            <p><strong>Descripción:</strong> Este endpoint describe las características (features) necesarias para realizar una predicción.</p>
-            <p><strong>Método:</strong> <code>GET</code></p>
+<div class="container">
+    <div class='features-box'>
+        <h2>/features</h2>
+        <p><strong>Descripción:</strong> Este endpoint describe las características (features) necesarias para realizar una predicción.</p>
+        <p><strong>Método:</strong> <code>GET</code></p>
 
-            <p><strong>Ejemplo de respuesta:</strong></p>
-            <pre>{
+        <p><strong>Ejemplo de respuesta:</strong></p>
+        <pre>{
   "Ram_GB": "Cantidad de memoria RAM en gigabytes",
   "Weight_kg": "Peso del portátil en kilogramos",
   "Inches": "Tamaño de la pantalla en pulgadas"
 }</pre>
-            <a href="/" class="btn">Volver al inicio</a>
-
-        </div>
+        <a href="/" class="btn">Volver al inicio</a>
     </div>
+</div>
 
 </body>
 </html>
