@@ -1,9 +1,3 @@
-{% extends 'base.html' %}
-
-{% block title %} Documentación de la API {% endblock %}
-
-
-{% block body %} 
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -52,6 +46,32 @@
     <div class="container">
         <h1>📘 Documentación de la API</h1>
 
+
+
+                
+        <div class="endpoint">
+            <h2>/inicio</h2>
+            <p><strong>Descripción:</strong> Landing page que explica los distintos endpoints disponibles en esta API y cómo usarlos. Es ideal para usuarios que visitan la aplicación por primera vez.</p>
+            <p><strong>Método:</strong> <code>GET</code></p>
+
+            <p><strong>Contenido:</strong> HTML informativo y accesible con enlaces y descripciones de los demás endpoints.</p>
+        </div>
+
+
+        <div class="endpoint">
+            <h2>/features</h2>
+            <p><strong>Descripción:</strong> Este endpoint describe las características (features) necesarias para realizar una predicción.</p>
+            <p><strong>Método:</strong> <code>GET</code></p>
+
+            <p><strong>Ejemplo de respuesta:</strong></p>
+            <pre>{
+  "Ram_GB": "Cantidad de memoria RAM en gigabytes",
+  "Weight_kg": "Peso del portátil en kilogramos",
+  "Inches": "Tamaño de la pantalla en pulgadas"
+}</pre>
+        </div>
+
+
         <div class="endpoint">
             <h2>/api/v1/predict</h2>
             <p><strong>Descripción:</strong> Este endpoint permite hacer predicciones utilizando un modelo de machine learning.</p>
@@ -73,18 +93,30 @@
 }</pre>
         </div>
 
+
         <div class="endpoint">
-            <h2>/features</h2>
-            <p><strong>Descripción:</strong> Este endpoint describe las características (features) necesarias para realizar una predicción.</p>
+            <h2>/api/v1/retrain/</h2>
+            <p><strong>Descripción:</strong> Este endpoint permite reentrenar el modelo de machine learning con nuevos datos.</p>
+            <p><strong>Método:</strong> <code>GET</code> (aunque en producción sería más seguro usar <code>POST</code>)</p>
+
+            <p><strong>Ejemplo de respuesta:</strong></p>
+            <pre>{
+  "message": "Modelo reentrenado con éxito",
+  "status": "updated"
+}</pre>
+
+        </div>
+
+                <div class="endpoint">
+            <h2>/status</h2>
+            <p><strong>Descripción:</strong> Este endpoint devuelve el estado actual de la API.</p>
             <p><strong>Método:</strong> <code>GET</code></p>
 
             <p><strong>Ejemplo de respuesta:</strong></p>
             <pre>{
-  "Ram_GB": "Cantidad de memoria RAM en gigabytes",
-  "Weight_kg": "Peso del portátil en kilogramos",
-  "Inches": "Tamaño de la pantalla en pulgadas"
+  "status": "OK",
+  "message": "La API está funcionando correctamente"
 }</pre>
         </div>
     </div>
 
-{% endblock %}

@@ -1,9 +1,3 @@
-{% extends 'base.html' %}
-
-{% block title %} Predicción {% endblock %}
-
-{% block body %} 
-{% if faltan_datos %}
     <script src="{{url_for('static', filename= 'js/empty.js')}}"></script>
     <div class="container">
     <div class="result-box">
@@ -67,9 +61,7 @@
         background-color: #0056b3;
     }
 </style>
-{% endif %}
 
-{% if not faltan_datos %}
 <div class="container">
     <div class="result-box">
         <h1>🔍 Resultado de la Predicción</h1>
@@ -133,5 +125,3 @@
         background-color: #0056b3;
     }
 </style>
-{% endif %}
-{% endblock %}

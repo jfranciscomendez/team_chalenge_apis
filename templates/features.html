@@ -1,8 +1,4 @@
-{% extends 'base.html' %}
 
-{% block title %} Descripción de features {% endblock %}
-
-{% block body %} 
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -67,15 +63,11 @@
 
     <div class="container">
             <h2>/features</h2>
-            <p><strong>Descripción:</strong> Este endpoint describe las características (features) necesarias para realizar una predicción.</p>
-            <p><strong>Método:</strong> <code>GET</code></p>
-
-            <p><strong>Ejemplo de respuesta:</strong></p>
-            <pre>{
-  "Ram_GB": "Cantidad de memoria RAM en gigabytes",
-  "Weight_kg": "Peso del portátil en kilogramos",
-  "Inches": "Tamaño de la pantalla en pulgadas"
-}</pre>
+            <pre>
+  <strong>"Ram_GB"</strong>: Cantidad de memoria RAM en gigabytes,
+  <strong>"Weight_kg"</strong>: Peso del portátil en kilogramos,
+  <strong>"Inches"</strong>: "Tamaño de la pantalla en pulgadas"
+</pre>
             <a href="/" class="btn">Volver al inicio</a>
 
         </div>
@@ -83,4 +75,3 @@
 
 </body>
 </html>
-{% endblock %}
